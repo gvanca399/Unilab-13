@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --clr-primary-200:#061427;
+    --clr-primary-100:#FFFFFF;
+
+    --clr-accents-200:#00FFF5;
+    --clr-accents-100:#FFFFFF;
+
+
+    /* font-family */
+    --ff-primary:'Nunito', sans-serif;
+
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
+
+    /* font-weight */
+
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-SemiBold:600;
+    --fw-bold:700;
+    --fw-extra-bold:800;
+
+    /* font size */
+    --fs-100:0.375rem;    /* 6px */
+    --fs-200:0.5rem;    /* 8px */
+    --fs-300:0.625rem;    /* 10px */
+    --fs-400:0.75rem;    /* 12px */
+    --fs-500:0.875rem;    /* 14px */
+    --fs-600:1rem;    /* 16px */
+    --fs-700:1.25rem;    /* 20px */
+    --fs-750:1.375rem;    /* 22px */
+    --fs-800:1.75rem;    /* 28px */
+    --fs-900:1.875rem;    /* 30px */
+
+    /* paddings, margins */
+    --size-100:0.625rem;    /* 10px */
+    --size-200:0.75rem;    /* 12px */
+    --size-300:1.125rem;    /* 18px */
+    --size-400:1.25rem;    /* 20px */
+    --size-500:1.375ren;    /* 22px */
+    --size-600:1.75rem;    /* 28px */
+    --size-700:1.875rem;    /* 30px */
+    --size-800:3rem;    /* 48px */
+    --size-900: 4rem;    /* 60px */
+}
+
+/* utility classes */
+
+.bg-primary-200{
+    background-color:var(--clr-primary-200) ;
+}
+.bg-primary-100{
+    background-color:var(--clr-primary-100) ;
+}
+.bg-button{
+    background-color:var(--clr-accents-200) ;
+}
+
+.text-accents-200{
+    color: var(--clr-accents-200);
+}
+.text-accents-100{
+    color: var(--clr-accents-100);
+}
+
+
+/* font weight */
+
+.fw-regular{
+    font-weight: var(--fw-regular);
+}
+.fw-medium{
+    font-weight: var(--fw-medium);
+}
+.fw-SemiBold{
+    font-weight: var(--fw-SemiBold);
+}
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+.fw-extra-bold{
+    font-weight: var(--fw-extra-bold);
+}
+
+
+/* font size */
+
+.fs-100{
+    font-size: var(--fs-100);
+}
+.fs-200{
+    font-size: var(--fs-200);
+}
+.fs-300{
+    font-size: var(--fs-300);
+}
+.fs-400{
+    font-size: var(--fs-400);
+}
+.fs-500{
+    font-size: var(--fs-500);
+}
+.fs-600{
+    font-size: var(--fs-600);
+}
+.fs-700{
+    font-size: var(--fs-700);
+}
+.fs-750{
+    font-size: var(--fs-750);
+}
+.fs-800{
+    font-size: var(--fs-800);
+}
+.fs-900{
+    font-size: var(--fs-900);
+}
+
+/* margins and paddings */
+
+/* general styling */
+.columns{
+    display: grid;
+    gap: 1rem;
+}
+@media (min-width: 5em) {
+    .columns{
+        grid-auto-flow: column;
+        align-items: center;
+    }
+}
