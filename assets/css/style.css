@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
+@keyframes move {   from {top: 300px;background: rgba(0, 89, 255, 0.37);}
+to {top: 0px;}}
+@keyframes top {   from {top: 0px;background: rgba(0, 89, 255, 0.37);}
+to {top: 300px; }}
+
+
 :root{
     --clr-primary-200:#061427;
     --clr-primary-100:#FFFFFF;
@@ -39,7 +45,7 @@
     --size-200:0.75rem;    /* 12px */
     --size-300:1.125rem;    /* 18px */
     --size-400:1.25rem;    /* 20px */
-    --size-500:1.375ren;    /* 22px */
+    --size-500:1.375rem;    /* 22px */
     --size-600:1.75rem;    /* 28px */
     --size-700:1.875rem;    /* 30px */
     --size-800:3rem;    /* 48px */
@@ -116,6 +122,15 @@
 }
 
 /* margins and paddings */
+.margin-bottom-500{
+    margin-bottom: var(--size-500);
+}
+.margin-right-900{
+    margin-right: var(--size-900);
+}
+.margin-right-300{
+    margin-right: var(--size-300);
+}
 
 /* general styling */
 body{
@@ -123,7 +138,7 @@ body{
     background-color: var(--clr-primary-200);
 }
 .container {
-    --max-width:90%;
+    --max-width:85%;
     --container-padding: 1rem;
 
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -136,11 +151,15 @@ body{
 .columns{
     display: grid;
     gap: 1rem;
+
 }
 @media (min-width: 30em) {
     .columns{
         grid-auto-flow: column;
         align-items: center;
+    }
+    .secund-section-content{
+        width: 110px;
     }
 }
 .button{
@@ -151,12 +170,160 @@ body{
     border: none;
     border-radius: 30px;
     padding: 12px 45px;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
+    text-shadow: 1px 2px rgb(10, 7, 9);
+    filter: drop-shadow(5px 5px 20px rgb(0, 200, 255)) invert(25%);
+}
+.inner-fist-section-info{
+    width: 610px;
+}
+.fist-section-button{
+    margin-top: 60px;
+}
+.fist-section-info-socilas{
+    align-self:end;
+    transition: .1s ease-in-out;
+}
+.fist-section-info-socilas li:hover{
+    filter: drop-shadow(30px 15px 2px #4444dd);
+}
+.second-section-button, .third-section-button, .forth-section-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.section-title{
+    text-align: center;
+    margin: 150px 0 40px 0;
 }
 .first-section-img{
+    width: 400px;
+    background: linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 25px 1px, 1px 25px;
     border-radius: 30px;
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%230066FFFF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='53' stroke-linecap='square'/%3e%3c/svg%3e");
+    
+}
+.first-section-img img{
+    border-radius: 74px;
+    padding: 30px 40px;
+}
+.light-top{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(64, 66, 160, 0.63);
+    filter: blur(75px);
+    left: 19%;
+    top: -33px;
+    animation: move 5s linear infinite;
+    animation-direction: alternate;
+}
+.light-bottom{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(60, 62, 151, 0.63);
+    filter: blur(75px);
+    left: -2%;
+    bottom: -521px;
+    animation: top 5s linear infinite;
+    animation-direction: alternate;
+}
+.light{
+    position: relative;
+}
+.second-section-work .inner-secund-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 60px;
+    column-gap: 30px;
+    justify-items: center;
+    transition: 1s ease-in-out;
+}
+.secund-section-content{
+    position: relative;
+}
+.work-button{
+    position: absolute;
+    top: 44%;
+    left: 20%;
+}
+.secund-section-content:hover img{
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.secund-section-content:hover .button-work{
+    background-color:var(--clr-accents-200) ;
+    color: var(--clr-accents-100);
+    transform: scale(1.1);
+    text-shadow: 1px 2px rgb(10, 7, 9);
+    filter: drop-shadow(5px 5px 20px rgb(0, 200, 255)) invert(25%);
+
+}
+
+.button-work{
+    background-color:transparent ;
+    font-size: 18px;
+    font-weight: var(--fw-regular);
+    color: transparent;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 45px;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+.secund-section-content{
+    width: 370px;
+    padding: 40px 30px;
+    background: linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 25px 1px, 1px 25px;
     border-radius: 30px;
 }
-img{
+.secund-section-content img{
     border-radius: 30px;
+
+}
+.inner-top-section{
+    padding: 30px 30px 10px 40px;
+    background: linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 25px 1px, 1px 25px;
+    border-radius: 30px;
+    
+}
+.experience-info{
+    width: 990px;
+}
+.date p{
+    rotate: 90deg;
+}
+.inner-third-section .see-more{ 
+    float: right;
+}
+.forth-section-contact p{
+    text-align: center;
+}
+.inner-contact{
+    background: linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 25px 1px, 1px 25px;
+    border-radius: 30px;
+    padding: 30px 20px;
+}
+.inner-contact{
+    margin-right: 600px;
+}
+.forth-section-socilas img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(5px 5px 20px rgb(255, 0, 38)) invert(85%);
 }
