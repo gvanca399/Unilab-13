@@ -54,9 +54,6 @@
 .bg-primary-100{
     background-color:var(--clr-primary-100) ;
 }
-.bg-button{
-    background-color:var(--clr-accents-200) ;
-}
 
 .text-accents-200{
     color: var(--clr-accents-200);
@@ -121,13 +118,45 @@
 /* margins and paddings */
 
 /* general styling */
+body{
+    font-family:'Nunito', sans-serif;
+    background-color: var(--clr-primary-200);
+}
+.container {
+    --max-width:90%;
+    --container-padding: 1rem;
+
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
 .columns{
     display: grid;
     gap: 1rem;
 }
-@media (min-width: 5em) {
+@media (min-width: 30em) {
     .columns{
         grid-auto-flow: column;
         align-items: center;
     }
+}
+.button{
+    background-color:var(--clr-accents-200) ;
+    font-size: 18px;
+    font-weight: var(--fw-regular);
+    color: var(--clr-accents-100);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 45px;
+}
+.first-section-img{
+    border-radius: 30px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%230066FFFF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='53' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 30px;
+}
+img{
+    border-radius: 30px;
 }
