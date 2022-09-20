@@ -138,7 +138,7 @@ body{
     background-color: var(--clr-primary-200);
 }
 .container {
-    --max-width:95%;
+    --max-width:75%;
     --container-padding: 0.65rem;
 
     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -184,38 +184,15 @@ body{
 .inner-header nav ol li:hover{
     transform: scale(1.1);
 }
-.hamburger {
-    position: fixed;
-    z-index: 100;
-    top: 3%;
-    right: 1rem;
-    padding: 4px;
-    border: black solid 1px;
-    background: white;
-    cursor: pointer;
+.resume:hover{
+    border: 1px dashed #0066FF;
+    padding: 5px 8px;
 }
-.menu {
-    position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background: black;
-    color: white;
-    list-style: none;
-    padding-top: 4rem;
-}
-.closeIcon {
-    display: none;
-}
-.showMenu {
-    transform: translateY(0);
+.fisrt-section-about-me{
+    width: 90%;
 }
 .inner-fist-section-info{
-    width: 610px;
+    padding: 10px;
 }
 .fist-section-button{
     margin-top: 60px;
@@ -226,15 +203,6 @@ body{
 }
 .fist-section-info-socilas li:hover{
     filter: drop-shadow(30px 15px 2px #4444dd);
-}
-.second-section-button, .third-section-button, .forth-section-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-.section-title{
-    text-align: center;
-    margin: 150px 0 40px 0;
 }
 .first-section-img{
     width: 400px;
@@ -274,15 +242,25 @@ body{
 .light{
     position: relative;
 }
-.secund-section-content{
-    position: relative;
+.second-section-button, .third-section-button, .forth-section-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.section-title{
+    text-align: center;
+    margin: 150px 0 40px 0;
 }
 .second-section-work .inner-secund-section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 60px;
+    column-gap: 20px;
     justify-items: center;
     transition: 1s ease-in-out;
+}
+.second-section-work{
+    width: 90%;
 }
 .work-button{
     position: absolute;
@@ -314,7 +292,8 @@ body{
     cursor: pointer;
 }
 .secund-section-content{
-    width: 370px;
+    position: relative;
+    width:100%;
     padding: 28px 23px;
     background: linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #0066FF 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#0066FF 50%, rgba(255, 255, 255, 0) 0%);
     background-position: top, right, bottom, left;
@@ -323,7 +302,7 @@ body{
     border-radius: 20px;
 }
 .secund-section-content img{
-    width: 325px;
+    width: 100%;
     border-radius: 20px;
 
 }
@@ -336,8 +315,12 @@ body{
     border-radius: 30px;
     
 }
-.experience-info{
-    width: 990px;
+.third-section-experience{
+    width: 90%;
+
+}
+.contact-info .right-img img{
+    width:100%;
 }
 .date p{
     transform: rotate(-90deg);
@@ -355,7 +338,6 @@ body{
     background-size: 25px 1px, 1px 25px;
     border-radius: 30px;
     padding: 30px 20px;
-    margin-right: 600px;
     position: relative;
 }
 .forth-section-socilas img:hover {
@@ -363,38 +345,310 @@ body{
     filter: drop-shadow(5px 5px 20px rgb(255, 0, 38)) invert(85%);
 }
 
-@media (min-width: 30em) {
+@media (min-width: 40em) {
     .columns{
         grid-auto-flow: column;
         align-items: center;
     }
-    .hamburger{
-        display: none;
-    }
     
 }
-@media only screen and (max-width: 30em) {
-    .menu {
-        position: fixed;
-        transform: translateY(-100%);
-        transition: transform 0.2s;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 99;
-        background: black;
-        color: white;
-        list-style: none;
-        padding-top: 4rem;
+@media only screen and (max-width: 1500px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 18px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 35px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
     }
+}
+@media only screen and (max-width: 1500px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 18px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 30px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 18px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 25px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 18px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 20px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 75em) {
+    .section-title h2{
+        font-size: 24px;
+    }
+    .first-section-img{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .first-section-img img{
+        width: 290px;
+        border-radius: 30px;
+        padding: 10px 11px;
+    }
+    .greet{
+        font-size: 20px;
+    }
+    .fist-section-info-details p{
+        font-size: 16px;
+    }
+    .button{
+        font-size: 15px;
+        padding: 15px 25px;
+    }
+
+
+    
+    .button-work{
+        background-color:transparent ;
+        font-size: 14px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 27px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+    .work-button{
+        top: 38%;
+        left: 20%;
+    }
+    .date p{
+        font-size: 12px;
+    }
+    .inner-top-section{
+        padding: 10px 15px;
+    }
+    .experience-info{
+        width: 100%;
+    }
+    .experience-info .subject h5{
+        font-size: 16px;
+    }
+    .right-side ul li p{
+        font-size: 14px;
+    }
+    .see-more{
+        font-size: 10px;
+    }
+    .collaboration p{
+        font-size: 16px;
+    }
+    .partnership p{
+        font-size: 14px;
+    }
+    .inner-contact span{
+        font-size: 10px;
+    }
+    .inner-contact img{
+        width: 20px;
+    }
+    .contact-info .right-img img{
+        width:100%;
+    }
+    .inner-fist-section-info{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1140px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 14px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 20px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 1050px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 12px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 10px 18px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+    .section-title h2{
+        font-size: 20px;
+    }
+    .first-section-img{
+        width: 280px;
+        margin: 0 auto;
+    }
+    .first-section-img img{
+        width: 270px;
+        border-radius: 30px;
+        padding: 10px 11px;
+    }
+    .greet{
+        font-size: 16px;
+    }
+    .fist-section-info-details p{
+        font-size: 14px;
+    }
+    .button{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+@media only screen and (max-width: 880px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 10px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 8px 16px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+    .section-title h2{
+        font-size: 16px;
+    }
+    .first-section-img{
+        width: 260px;
+        margin: 0 auto;
+    }
+    .first-section-img img{
+        width: 250px;
+        border-radius: 30px;
+        padding: 10px 11px;
+    }
+    .greet{
+        font-size: 12px;
+    }
+    .fist-section-info-details p{
+        font-size: 10px;
+    }
+    .button{
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+    .experience-info{
+        width: 100%;
+    }
+    .experience-info .subject h5{
+        font-size: 14px;
+    }
+    .right-side ul li p{
+        font-size: 13px;
+    }
+    .see-more{
+        font-size: 10px;
+    }
+    .collaboration p{
+        font-size: 14px;
+    }
+    .partnership p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 790px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 10px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 6px 14px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+    .section-title h2{
+        font-size: 16px;
+    }
+    .first-section-img{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .first-section-img img{
+        width: 240px;
+        border-radius: 30px;
+        padding: 10px 11px;
+    }
+    .greet{
+        font-size: 12px;
+    }
+    .fist-section-info-details p{
+        font-size: 10px;
+    }
+    .button{
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+    .experience-info .subject h5{
+        font-size: 13px;
+    }
+    .right-side ul li p{
+        font-size: 12px;
+    }
+    .see-more{
+        font-size: 10px;
+    }
+    .collaboration p{
+        font-size: 13px;
+    }
+    .partnership p{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .button-work{
+        background-color:transparent ;
+        font-size: 8px;
+        font-weight: var(--fw-regular);
+        color: transparent;
+        border: none;
+        border-radius: 30px;
+        padding: 6px 14px;
+        transition: .1s ease-in-out;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 40em) {
     .resume{
         margin: 0 auto
-    }
-    .hamburger{
-        background-color: transparent;
-        border: none;
-        color: #00FFF5;
     }
     .section-title h2{
         font-size: 16px;
@@ -477,9 +731,6 @@ body{
     .partnership p{
         font-size: 12px;
     }
-    .inner-contact{
-        margin-right: 30px;
-    }
     .inner-contact span{
         font-size: 10px;
     }
@@ -487,9 +738,9 @@ body{
         width: 20px;
     }
     .contact-info .right-img img{
-        width: 190px;
+        width:100%;
     }
     .inner-fist-section-info{
-        width: 335px;
+        width: 100%;
     }
 }
