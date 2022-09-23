@@ -19,14 +19,14 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <header>
+    <header>
         <div class="container">
             <div class="inner-header header-flex">
                 <div class="header-logo">
                     <a class="fs-900 fw-extra-bold text-accents-200" href="./index.html">LOGO</a>
                 </div>
                 <nav class="nav">
-                    <ol class="header-flex menu" aria-label="Primary" role="list">
+                    <ol class="header-nav-ul header-flex menu" aria-label="Primary" role="list">
                         <li class="menuItem"><a class="menuItem fs-600 fw-medium text-accents-200" href="#">01. About</a></li>
                         <li class="menuItem"><a class="menuItem fs-600 fw-medium text-accents-200" href="#">02. Work</a></li>
                         <li class="menuItem"><a class="menuItem fs-600 fw-medium text-accents-200" href="#">03. Experience</a></li>
@@ -36,9 +36,14 @@
                 <div class="resume">
                     <a class="fs-600 fw-bold text-accents-200" href="#">RESUME</a>
                 </div>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </header> -->
+    </header>
     <main>
         <div class="container">
             <div class="fisrt-section-about-me">
@@ -64,8 +69,45 @@
                                     Nunito is a playful, friendly, and modern font that works well for landing page design, software design, and many other use cases.
                                 </p>
                             </div>
-                            <div class="fist-section-button">
-                                <button class="button">Let’s work together</button>
+                            <div class="modal-container">
+                                <div class="modal-wrapper">
+                                    <div class="modal">
+                                    <button class="button close-modal">
+                                        X
+                                    </button>
+                                    <div class="contant-form">
+                                        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                                            <div class="name-surname ">
+                                                <div class="name | margin-right-850">
+                                                    <label for="fname">სახელი</label>
+                                                    <input type="text" required id="fname" name="fname"><br><br>
+                                                </div>
+                                                <div class="surname">
+                                                    <label for="lname">გვარი</label>
+                                                    <input type="text" required id="lname" name="lname"><br>
+                                                </div>
+                                            </div>
+                                            <div class="mail-number ">
+                                                <div class="mail | margin-right-850">
+                                                    <label class="email" for="email" >ელ-ფოსტაl</label>
+                                                    <input class="text" type="text" required name="email" >
+                                                </div>
+                                                <div class="number">
+                                                    <label class="fName" for="number">ტელეფონის ნომერი</label>
+                                                    <input type="text" required name="text" >
+                                                </div>
+                                            </div>
+                                            <div class="textarea">
+                                                <textarea name="text-area" required cols="50" rows="5" placeholder="დაწერეთ თქვენი შეკითხვა…"></textarea>
+                                            </div>
+                                            <input type="submit" value="SENT">
+                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="fist-section-button">
+                                    <button class="fist-section-button button open-modal">Let’s work together</button>
+                                </div>
                             </div>
                         </div>
                         <div class="fist-section-info-socilas">
